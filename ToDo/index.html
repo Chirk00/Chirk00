@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>ToDO</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script defer src="./todo-app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let def = [
+        {id: 1, name: 'Купить наушники', done: false},
+        {id: 2, name: 'Мороженное', done: false},
+      ];
+      createTodoApp(document.getElementById('todo-app'), 'Мои дела', 'my', def); //инициализируем наше приложение
+    });
+  </script>
+</head>
+<body>
+  <div class="container md-5">
+    <div class="nav">
+      <a href="index.html" class="nav-link">Мои дела</a>
+      <a href="dad.html" class="nav-link">Дела папы</a>
+      <a href="mom.html" class="nav-link">Дела мамы</a>
+    </div>
+  </div>
+  <div class="container" id="todo-app"></div>
+</body>
+</html>
